@@ -7,7 +7,14 @@ let computeSelection = computerPlay();
 computeSelection = computeSelection.toLowerCase();
 let playerSelection = prompt("What is your weapon of choice? Rock, paper of scissors");
 playerSelection = playerSelection.toLowerCase();
-alert("computer chooses " + computeSelection);
+    if (playerSelection == "rock" || playerSelection == "paper" || playerSelection == "scissors" ) {
+        alert("computer chooses " + computeSelection);
+        alert (roundRps(computeSelection,playerSelection));
+        
+    } else {
+        playerSelection = prompt("Try again you mong");
+    } 
+
 
 function computerPlay(){
     let rps = ["rock","paper","scissors"];
@@ -45,7 +52,7 @@ function roundRps (computeSelection, playerSelection){
     
     
 }
-alert (roundRps(computeSelection,playerSelection));
+//alert (roundRps(computeSelection,playerSelection));
 
 //let computerSelection = computerPlay();
 
