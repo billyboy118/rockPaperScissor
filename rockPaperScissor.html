@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+    
+let computeSelection = computerPlay();
+computeSelection = computeSelection.toLowerCase();
+let playerSelection = prompt("What is your weapon of choice? Rock, paper of scissors");
+playerSelection = playerSelection.toLowerCase();
+alert("computer chooses " + computeSelection);
+
+function computerPlay(){
+    let rps = ["rock","paper","scissors"];
+    return computerSelection = rps[Math.floor(Math.random()*rps.length)];
+    //alert (computerSelection);
+    //return computerSelection;
+    //console.log(computerPlay);
+}
+
+function roundRps (computeSelection, playerSelection){
+    let response;
+
+    if (playerSelection == computeSelection) {
+        return response = "It is a draw, try again"; 
+    } else if (playerSelection == "rock" && computeSelection == "paper") {
+        return response = "Unlucky sunshine better look next time";
+    } else if (playerSelection == "rock" && computeSelection == "scissors") {
+        return response = "Well done rock beats scissors";
+    }
+    
+    else if (playerSelection == "paper" && computeSelection == "rock") {
+        return response = "Well done treacle you win";
+    } else if (playerSelection == "paper" && computeSelection == "scissors") {
+        return response = "Nooooooooo scissors beats paper, you loose";
+    }
+    
+    else if (playerSelection == "scissors" && computeSelection == "paper") {
+        return response = "Scissors smashes paper, YOU WIN";
+    } else if (playerSelection == "scissors" && computeSelection == "rock") {
+        return response = "loose";
+    } else {
+        return response = "Hmmmmmmmmmm something appears to be broke";
+    } 
+
+    
+    
+}
+alert (roundRps(computeSelection,playerSelection));
+
+//let computerSelection = computerPlay();
+
+</script>
+
+</body>
+</html>
