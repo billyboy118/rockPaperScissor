@@ -5,57 +5,32 @@
     
 
 
-let playerSelection; // = "rock";
+let playerSelection = "rock"; //= prompt("Rock, paper of scissors");
 let computeSelection;
+playerSelection = playerSelection.toLowerCase();
+computeSelection = computerPlay();
 
 
-function userSelection () {
-    let playerSelection = prompt("Rock, Paper or Scissors");
-    playerSelection = playerSelection.toLowerCase();
-
-    if (!(playerSelection == "rock"|| playerSelection == "paper"|| playerSelection == "scissors")) {
-        playerSelection = prompt("You have spelt that wrong try again, Rock, Paper or Scissors")
-            if (!(playerSelection == "rock"|| playerSelection == "paper"|| playerSelection == "scissors")) {
-                playerSelection = prompt("You have spelt that wrong try again, Rock, Paper or Scissors")
-                if (!(playerSelection == "rock"|| playerSelection == "paper"|| playerSelection == "scissors")) {
-                    playerSelection = prompt("You have spelt that wrong try again, Rock, Paper or Scissors")
-                    if (!(playerSelection == "rock"|| playerSelection == "paper"|| playerSelection == "scissors")) {
-                    playerSelection = alert ("I give up go away!!!!") 
-                    } else {
-                        return playerSelection;
-                    }
-                } else{
-                    return playerSelection;
-                } 
-            } else {
-                return playerSelection;
-            }
-        //location.reload(true);
-        //roundRps1 ();
-    } else {
-        return playerSelection;
-        //console.log (playerSelection)
-    }
-}
 
 function computerPlay(){
     let rps = ["rock","paper","scissors"];
     let computerSelection = rps[Math.floor(Math.random()*rps.length)];
     return computerSelection = computerSelection.toLowerCase();
     //alert(computerSelection);
-}
+    
 
-function roundRps1(){
+}
+//alert(computeSelection);
+
+/* function roundRps (computeSelection, playerSelection){
     let response;
-    let playerSelection = userSelection ();
-    console.log("player selection " + playerSelection) ;
-    let computeSelection = computerPlay();
-    alert("Computer chooses " + computeSelection);
+    console.log ("player selection " + playerSelection);
+    console.log ("computer selection " + computeSelection);
 
     if (playerSelection == computeSelection) {
         return response = "It is a draw, try again"; 
     } else if (playerSelection == "rock" && computeSelection == "paper") {
-        return response = "Unlucky better luck next time";
+        return response = "Unlucky better look next time";
     } else if (playerSelection == "rock" && computeSelection == "scissors") {
         return response = "Well done rock beats scissors";
     }
@@ -63,18 +38,48 @@ function roundRps1(){
     else if (playerSelection == "paper" && computeSelection == "rock") {
         return response = "Well done you win";
     } else if (playerSelection == "paper" && computeSelection == "scissors") {
-        return response = "Scissors beats paper, you lose";
+        return response = "Scissors beats paper, you loose";
     }
     
     else if (playerSelection == "scissors" && computeSelection == "paper") {
         return response = "Scissors smashes paper, YOU WIN";
     } else if (playerSelection == "scissors" && computeSelection == "rock") {
-        return response = "lose";
+        return response = "loose";
+    } else {
+        return response = "Hmmmmmmmmmm something appears to be broke";
+    }    
+} 
+*/
+
+function roundRps1(){
+    let response;
+    console.log("player selection " + playerSelection) ;
+    let computeSelection = computerPlay();
+    console.log("computer selection " + computeSelection);
+    if (playerSelection == computeSelection) {
+        return response = "It is a draw, try again"; 
+    } else if (playerSelection == "rock" && computeSelection == "paper") {
+        return response = "Unlucky better look next time";
+    } else if (playerSelection == "rock" && computeSelection == "scissors") {
+        return response = "Well done rock beats scissors";
+    }
+    
+    else if (playerSelection == "paper" && computeSelection == "rock") {
+        return response = "Well done you win";
+    } else if (playerSelection == "paper" && computeSelection == "scissors") {
+        return response = "Scissors beats paper, you loose";
+    }
+    
+    else if (playerSelection == "scissors" && computeSelection == "paper") {
+        return response = "Scissors smashes paper, YOU WIN";
+    } else if (playerSelection == "scissors" && computeSelection == "rock") {
+        return response = "loose";
     } else {
         return response = "Hmmmmmmmmmm something appears to be broke";
     }    
 }
 //alert(roundRps(computeSelection,playerSelection));
+
 
 function game1() {
     let ps1;
@@ -96,17 +101,17 @@ case "Well done you win":
 case "Scissors smashes paper, YOU WIN":
     ps1 = 1;
     cs1 = 0;
-    alert ("You win");
+    console.log("you win");
 break;
-case "Unlucky better luck next time":
-case "Scissors beats paper, you lose":
-case "lose":
+case "Unlucky better look next time":
+case "Scissors beats paper, you loose":
+case "loose":
     ps1 = 0;
     cs1 = 1;
-    alert ("You lose, what a loser");
+    console.log("you loose, what a loser");
 break;    
 default:
-    alert ("Draw");
+    console.log("Draw");
     ps1 = 0;
     cs1 = 0;
 }
@@ -118,19 +123,19 @@ case "Well done you win":
 case "Scissors smashes paper, YOU WIN":
     ps2 = 1;
     cs2 = 0;
-    alert ("You win");
+    console.log("you win");
 break;
-case "Unlucky better luck next time":
-case "Scissors beats paper, you lose":
-case "lose":
+case "Unlucky better look next time":
+case "Scissors beats paper, you loose":
+case "loose":
     cs2 = 1;
     ps2 = 0;
-    alert ("You lose, what a loser");
+    console.log("you loose, what a loser");
 break;
 default:
     ps2 = 0;
     cs2 = 0;
-    alert ("Draw");
+    console.log("Draw");
 }
 
 switch (roundRps1(computeSelection, playerSelection)){
@@ -140,19 +145,19 @@ case "Well done you win":
 case "Scissors smashes paper, YOU WIN":
     ps3 = 1;
     cs3 = 0;
-    alert("You win");
+    console.log("you win");
 break;
-case "Unlucky better luck next time":
-case "Scissors beats paper, you lose":
-case "lose":
+case "Unlucky better look next time":
+case "Scissors beats paper, you loose":
+case "loose":
     cs3 = 1;
     ps3 = 0;
-    alert("You lose, what a loser");
+    console.log("you loose, what a loser");
 break;
 default:
     ps3 = 0;
     cs3 = 0;
-    alert("Draw");
+    console.log("Draw");
 }
 
 switch (roundRps1(computeSelection, playerSelection)){
@@ -162,19 +167,19 @@ case "Well done you win":
 case "Scissors smashes paper, YOU WIN":
     ps4 = 1;
     cs4 = 0;
-    alert("You win");
+    console.log("you win");
 break;
-case "Unlucky better luck next time":
-case "Scissors beats paper, you lose":
-case "lose":
+case "Unlucky better look next time":
+case "Scissors beats paper, you loose":
+case "loose":
     cs4 = 1;
     ps4 = 0;
-    alert("You lose, what a loser");
+    console.log("you loose, what a loser");
 break;    
 default:
     ps4 = 0;
     cs4 = 0;
-    alert("Draw");
+    console.log("Draw");
 }
 switch (roundRps1(computeSelection, playerSelection)){
 
@@ -183,21 +188,20 @@ case "Well done you win":
 case "Scissors smashes paper, YOU WIN":
     ps5 = 1;
     cs5 = 0;
-    alert("You win");
+    console.log("you win");
 break;
-case "Unlucky better luck next time":
-case "Scissors beats paper, you lose":
-case "lose":
+case "Unlucky better look next time":
+case "Scissors beats paper, you loose":
+case "loose":
     cs5 = 1;
     ps5 = 0;
-    alert("You lose, what a loser");
+    console.log("you loose, what a loser");
 break;    
 default:
     ps5 = 0;
     cs5 = 0;
-    alert("Draw");
+    console.log("Draw");
 }
-
 
 
 //console.log (ps1,ps2,ps3,ps4,ps5);
@@ -207,30 +211,22 @@ let fcs = parseInt(cs1+cs2+cs3+cs4+cs5);
 console.log (fps);
 
 if (fps>fcs) {
-    return (`Well done Chan you win ${fps}-${fcs}`);
+    console.log ("Well done you win");
 } else if (fps<fcs){
-    return (`You lose ${fps}-${fcs}, what a loser you are Channnnnyyyyyyyyyy`);
+    console.log ("You loose, what a looser");
 } else {
-    return (`${fps}-${fcs} Draw, how boring`);
+    console.log ("Draw, how boring");
 }
 
 
 }
 
-//alert ("hello Chan lets play Rock, Paper and Scissors, best out of 5");
-//alert (game1():);
-
-function startGame (){
-    alert ("Hello Chan lets play Rock, Paper and Scissors, best out of 5");
-    alert (game1());
-
-}
-
-startGame ();
 
 
 
-location.reload(true);
+
+
+//location.reload(true);
 </script>
 
 </body>
