@@ -12,6 +12,7 @@ let computeSelection;
 function userSelection () {
     let playerSelection = prompt("Rock, Paper or Scissors");
     playerSelection = playerSelection.toLowerCase();
+    playerSelection = playerSelection.trim();
 
     if (!(playerSelection == "rock"|| playerSelection == "paper"|| playerSelection == "scissors")) {
         playerSelection = prompt("You have spelt that wrong try again, Rock, Paper or Scissors")
@@ -89,7 +90,7 @@ function game1() {
     let cs4;
     let cs5;
 
-switch (roundRps1(computeSelection, playerSelection)){
+switch (roundRps1()){
 
 case "Well done rock beats scissors":
 case "Well done you win":
@@ -111,7 +112,7 @@ default:
     cs1 = 0;
 }
 
-switch (roundRps1(computeSelection, playerSelection)){
+switch (roundRps1()){
 
 case "Well done rock beats scissors":
 case "Well done you win":
@@ -133,7 +134,7 @@ default:
     alert ("Draw");
 }
 
-switch (roundRps1(computeSelection, playerSelection)){
+switch (roundRps1()){
 
 case "Well done rock beats scissors":
 case "Well done you win":
@@ -155,7 +156,7 @@ default:
     alert("Draw");
 }
 
-switch (roundRps1(computeSelection, playerSelection)){
+switch (roundRps1()){
 
 case "Well done rock beats scissors":
 case "Well done you win":
@@ -176,7 +177,7 @@ default:
     cs4 = 0;
     alert("Draw");
 }
-switch (roundRps1(computeSelection, playerSelection)){
+switch (roundRps1()){
 
 case "Well done rock beats scissors":
 case "Well done you win":
@@ -209,7 +210,7 @@ console.log (fps);
 if (fps>fcs) {
     return (`Well done Chan you win ${fps}-${fcs}`);
 } else if (fps<fcs){
-    return (`You lose ${fps}-${fcs}, what a loser you are Channnnnyyyyyyyyyy`);
+    return (`You lose ${fps}-${fcs}, what a loser`);
 } else {
     return (`${fps}-${fcs} Draw, how boring`);
 }
@@ -221,7 +222,7 @@ if (fps>fcs) {
 //alert (game1():);
 
 function startGame (){
-    alert ("Hello Chan lets play Rock, Paper and Scissors, best out of 5");
+    alert ("Hello, lets play Rock, Paper and Scissors, best out of 5");
     alert (game1());
 
 }
