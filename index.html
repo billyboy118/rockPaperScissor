@@ -5,7 +5,7 @@
     
 
 
-let playerSelection; // = "rock";
+let playerSelection;
 let computeSelection;
 
 
@@ -31,11 +31,8 @@ function userSelection () {
             } else {
                 return playerSelection;
             }
-        //location.reload(true);
-        //roundRps1 ();
     } else {
-        return playerSelection;
-        //console.log (playerSelection)
+        return playerSelection;    
     }
 }
 
@@ -43,7 +40,6 @@ function computerPlay(){
     let rps = ["rock","paper","scissors"];
     let computerSelection = rps[Math.floor(Math.random()*rps.length)];
     return computerSelection = computerSelection.toLowerCase();
-    //alert(computerSelection);
 }
 
 function roundRps1(){
@@ -75,7 +71,6 @@ function roundRps1(){
         return response = "Hmmmmmmmmmm something appears to be broke";
     }    
 }
-//alert(roundRps(computeSelection,playerSelection));
 
 function game1() {
     let ps1;
@@ -199,28 +194,19 @@ default:
     alert("Draw");
 }
 
-
-
-//console.log (ps1,ps2,ps3,ps4,ps5);
 let fps = parseInt(ps1+ps2+ps3+ps4+ps5);
 let fcs = parseInt(cs1+cs2+cs3+cs4+cs5);
 
 console.log (fps);
 
 if (fps>fcs) {
-    return (`Well done Chan you win ${fps}-${fcs}`);
+    return (`Well done you win ${fps}-${fcs}`);
 } else if (fps<fcs){
     return (`You lose ${fps}-${fcs}, what a loser`);
 } else {
     return (`${fps}-${fcs} Draw, how boring`);
 }
-
-
 }
-
-//alert ("hello Chan lets play Rock, Paper and Scissors, best out of 5");
-//alert (game1():);
-
 function startGame (){
     alert ("Hello, lets play Rock, Paper and Scissors, best out of 5");
     alert (game1());
@@ -228,9 +214,6 @@ function startGame (){
 }
 
 startGame ();
-
-
-
 location.reload(true);
 </script>
 
